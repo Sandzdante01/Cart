@@ -1,10 +1,13 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Cart } from "./Components/Cart/Cart";
+
 function App() {
   return (
-    <App>
+    <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Cart />} />
       </Routes>
-    </App>
+    </Router>
   );
 }
 

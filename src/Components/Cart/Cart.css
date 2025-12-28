@@ -1,0 +1,129 @@
+.cartContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.cartHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+.cartHeader h1 {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: #2a2a2a;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.headerSubtitle {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 300;
+  color: #666;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.emptyCart {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f8f5f0 0%, #fffbf5 100%);
+  border-radius: 16px;
+  margin: 2rem 0;
+  border: 1px solid rgba(184, 134, 11, 0.1);
+}
+
+.emptyCart h2 {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  color: #2a2a2a;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.emptyCart p {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.continueButton {
+  background: #b8860b;
+  color: white;
+  padding: 0.875rem 2.5rem;
+  border-radius: 50px;
+  border: none;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.2);
+}
+
+.continueButton:hover {
+  background: #8b6914;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(184, 134, 11, 0.3);
+}
+
+.cartGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .cartGrid {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+  }
+}
+
+.cartItemsSection {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(184, 134, 11, 0.1);
+}
+
+.itemsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+.itemsHeader h2 {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #2a2a2a;
+  margin: 0;
+}
+
+.itemCount {
+  font-weight: 400;
+  color: #b8860b;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.summarySection {
+  position: relative;
+}

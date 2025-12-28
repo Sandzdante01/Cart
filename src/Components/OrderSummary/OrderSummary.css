@@ -1,0 +1,147 @@
+.orderSummary {
+  background: white;
+  border: 1px solid rgba(184, 134, 11, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 2rem;
+  overflow: hidden;
+}
+
+.orderSummary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #b8860b, #ffd700);
+}
+
+.summaryTitle {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 1.75rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(184, 134, 11, 0.2);
+  font-size: 1.5rem;
+  color: #2a2a2a;
+  position: relative;
+}
+
+.summaryTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: #b8860b;
+}
+
+.summaryDetails {
+  margin-bottom: 2rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid rgba(184, 134, 11, 0.1);
+}
+
+.summaryRow:last-child {
+  border-bottom: none;
+}
+
+.summaryLabel {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 300;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.summaryValue {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  color: #2a2a2a;
+}
+
+.summaryDivider {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 2px solid rgba(184, 134, 11, 0.3);
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  padding: 1rem 0;
+  color: #2a2a2a;
+}
+
+.totalRow .summaryLabel {
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: #2a2a2a;
+}
+
+.totalRow .summaryValue {
+  color: #b8860b;
+  font-weight: 500;
+  font-size: 1.375rem;
+}
+
+.checkoutButton {
+  width: 100%;
+  background: linear-gradient(135deg, #b8860b, #ffd700);
+  color: white;
+  padding: 1rem;
+  border-radius: 50px;
+  border: none;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3);
+}
+
+.checkoutButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(184, 134, 11, 0.4);
+  background: linear-gradient(135deg, #8b6914, #b8860b);
+}
+
+.checkoutButton:active {
+  transform: translateY(0);
+}
+
+.summaryNote {
+  font-size: 0.75rem;
+  color: #999;
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(184, 134, 11, 0.1);
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 300;
+}
+
+/* Fee breakdown tooltip style */
+.feeInfo {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.25rem;
+  color: #b8860b;
+  cursor: help;
+}
