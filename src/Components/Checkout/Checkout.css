@@ -1,0 +1,327 @@
+.checkoutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.checkoutHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+.checkoutHeader h1 {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: #2a2a2a;
+  margin-bottom: 0.5rem;
+}
+
+.checkoutSubtitle {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 300;
+  color: #666;
+  font-size: 1rem;
+}
+
+.checkoutGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .checkoutGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Order Review Section */
+.orderReviewSection {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(184, 134, 11, 0.1);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+.sectionHeader h2 {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #2a2a2a;
+  margin: 0;
+}
+
+.editCartButton {
+  background: transparent;
+  border: 1px solid rgba(184, 134, 11, 0.3);
+  color: #b8860b;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.editCartButton:hover {
+  background: rgba(184, 134, 11, 0.1);
+  transform: translateY(-1px);
+}
+
+.orderItemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.orderSummaryCheckout {
+  background: #f8f5f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.orderSummaryCheckout .summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(184, 134, 11, 0.1);
+}
+
+.orderSummaryCheckout .summaryRow:last-child {
+  border-bottom: none;
+}
+
+.orderSummaryCheckout .totalRow {
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid rgba(184, 134, 11, 0.3);
+}
+
+.orderSummaryCheckout .totalAmount {
+  color: #b8860b;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+/* Order Form Section */
+.orderFormSection {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(184, 134, 11, 0.1);
+}
+
+.checkoutForm h2 {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #2a2a2a;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  color: #2a2a2a;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid rgba(184, 134, 11, 0.3);
+  border-radius: 8px;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-size: 1rem;
+  color: #2a2a2a;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: #b8860b;
+  box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Payment Methods */
+.paymentMethods {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.paymentOption {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid rgba(184, 134, 11, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.paymentOption:hover {
+  border-color: #b8860b;
+  background: rgba(184, 134, 11, 0.05);
+}
+
+.paymentOption input {
+  margin-right: 1rem;
+  accent-color: #b8860b;
+}
+
+.paymentOption span {
+  flex: 1;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  color: #2a2a2a;
+}
+
+.paymentIcons {
+  font-size: 1.25rem;
+  opacity: 0.7;
+}
+
+/* Terms Agreement */
+.termsAgreement {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f8f5f0;
+  border-radius: 8px;
+  border: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 300;
+  color: #2a2a2a;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.checkboxLabel input {
+  margin-top: 0.25rem;
+  accent-color: #b8860b;
+}
+
+.checkboxLabel a {
+  color: #b8860b;
+  text-decoration: underline;
+}
+
+.checkboxLabel a:hover {
+  color: #8b6914;
+}
+
+/* Pay Now Button */
+.payNowSection {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+.payNowButton {
+  width: 100%;
+  background: linear-gradient(135deg, #b8860b, #ffd700);
+  color: white;
+  padding: 1.25rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3);
+}
+
+.payNowButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(184, 134, 11, 0.4);
+  background: linear-gradient(135deg, #8b6914, #b8860b);
+}
+
+.payNowButton:active {
+  transform: translateY(0);
+}
+
+.payNowButton .buttonText {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.payNowButton .buttonAmount {
+  font-weight: 600;
+  font-size: 1.25rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+}
+
+.securePaymentNote {
+  text-align: center;
+  margin-top: 1rem;
+  color: #666;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+}

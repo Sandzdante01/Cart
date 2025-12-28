@@ -20,6 +20,14 @@
   letter-spacing: 1px;
 }
 
+.headerDivider {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, #b8860b, #ffd700);
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
 .headerSubtitle {
   font-family: "Outfit", system-ui, sans-serif;
   font-weight: 300;
@@ -74,6 +82,23 @@
   box-shadow: 0 6px 16px rgba(184, 134, 11, 0.3);
 }
 
+.clearCartButton {
+  background: transparent;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  color: #dc2626;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.clearCartButton:hover {
+  background: rgba(220, 38, 38, 0.1);
+  transform: translateY(-1px);
+}
+
 .cartGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -114,16 +139,28 @@
 }
 
 .itemCount {
-  font-weight: 400;
-  color: #b8860b;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 300;
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
 }
 
 .itemsList {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .summarySection {
   position: relative;
+}
+
+.secureNote {
+  text-align: center;
+  color: #666;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
 }

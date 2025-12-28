@@ -14,12 +14,10 @@ export function CartItem({ item, onUpdateQuantity, onRemove }) {
 
   return (
     <div className="cartItem">
-      {/* Item Image */}
       <div className="itemImage">
         <img src={item.image} alt={item.name} />
       </div>
 
-      {/* Item Details */}
       <div className="itemDetails">
         <div className="itemHeader">
           <div className="itemInfo">
@@ -35,13 +33,11 @@ export function CartItem({ item, onUpdateQuantity, onRemove }) {
           </button>
         </div>
 
-        {/* Price and Quantity Controls */}
         <div className="itemFooter">
           <div className="itemPrice">
             LKR {(item.price * item.quantity).toFixed(2)}
           </div>
 
-          {/* Quantity Controls */}
           <div className="quantityControls">
             <button
               onClick={handleDecrease}

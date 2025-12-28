@@ -1,9 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { CartItem } from "../CartItem/CartItem";
 import { OrderSummary } from "../OrderSummary/OrderSummary";
 import "./Cart.css";
 
-// Mock cart data
 const initialCartItems = [
   {
     id: "1",
@@ -45,6 +45,7 @@ const initialCartItems = [
 
 export function Cart() {
   const [cartItems, setCartItems] = useState(initialCartItems);
+  const navigate = useNavigate();
 
   const handleUpdateQuantity = (id, quantity) => {
     setCartItems((items) =>
@@ -57,7 +58,11 @@ export function Cart() {
   };
 
   const handleCheckout = () => {
-    alert("Proceeding to checkout...");
+    navigate("/checkout");
+  };
+
+  const handleContinueShopping = () => {
+    alert("Continue shopping feature would navigate to products page");
   };
 
   const subtotal = cartItems.reduce(
@@ -69,23 +74,38 @@ export function Cart() {
 
   return (
     <div className="cartContainer">
-      {/* Page Header */}
       <div className="cartHeader">
         <h1>Your Shopping Cart</h1>
         <div className="headerDivider" />
+        <p className="headerSubtitle">
+          Review and manage your items before checkout
+        </p>
       </div>
 
       {cartItems.length === 0 ? (
         <div className="emptyCart">
-          <p>Your cart is empty</p>
-          <button className="continueButton">CONTINUE SHOPPING</button>
+          <h2>Your cart is empty</h2>
+          <p>Add some delicious items to get started with your order</p>
+          <button className="continueButton" onClick={handleContinueShopping}>
+            CONTINUE SHOPPING
+          </button>
         </div>
       ) : (
         <div className="cartGrid">
-          {/* Cart Items */}
           <div className="cartItemsSection">
             <div className="itemsHeader">
-              <h2>Cart Items ({cartItems.length})</h2>
+              <div>
+                <h2>Cart Items</h2>
+                <p className="itemCount">
+                  {cartItems.length} item{cartItems.length !== 1 ? "s" : ""}
+                </p>
+              </div>
+              <button
+                className="clearCartButton"
+                onClick={() => setCartItems([])}
+              >
+                Clear All
+              </button>
             </div>
             <div className="itemsList">
               {cartItems.map((item) => (
@@ -99,7 +119,6 @@ export function Cart() {
             </div>
           </div>
 
-          {/* Order Summary */}
           <div className="summarySection">
             <OrderSummary
               subtotal={subtotal}
